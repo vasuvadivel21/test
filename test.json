@@ -1,0 +1,12 @@
+{
+    "Sid": "Stmt1561445614665",
+    "Effect": "Allow",
+    "Principal": {
+        "AWS": "arn:aws:iam::<Account_Number>:role/service-role/<your-codebuild-service-role>"
+    },
+    "Action": "s3:*",
+    "Resource": [
+        "arn:aws:s3:::bucketname",   
+        "arn:aws:s3:::bucketname/*" 
+    ]
+}

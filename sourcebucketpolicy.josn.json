@@ -1,0 +1,51 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "DelegateS3Access",
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": "arn:aws:iam::466052212456:root"
+			},
+			"Action": [
+				"s3:*"
+			],
+			"Resource": [
+				"arn:aws:s3:::sourcebucket987/*",
+				"arn:aws:s3:::sourcebucket987"
+			]
+		}
+	]
+}
+
+
+
+{
+    "Version": "2012-10-17",
+    "Id": "Policy1611277539797",
+    "Statement": [
+        {
+            "Sid": "Stmt1611277535086",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::237092322265:root"
+            },
+            "Action": "s3:*",
+            "Resource": "arn:aws:s3:::destination987/*",
+            "Condition": {
+                "StringEquals": {
+                    "s3:x-amz-acl": "bucket-owner-full-control"
+                }
+            }
+        },
+        {
+            "Sid": "Stmt1611277877767",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::237092322265:root"
+            },
+            "Action": "s3:ListBucket",
+            "Resource": "arn:aws:s3:::destination987"
+        },
+    ]
+}
