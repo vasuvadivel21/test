@@ -25,12 +25,5 @@
                 "arn:aws:s3:::destination987",
                 "arn:aws:s3:::destination987/*"
             ]
-        },
-        {
-            "Sid": "VisualEditor2",
-            "Effect": "Allow",
-            "Action": "s3:ListBucketVersions",
-            "Resource": "arn:aws:s3:::sourcebucket987"
         }
-    ]
-}
+    
